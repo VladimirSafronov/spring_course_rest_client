@@ -6,16 +6,12 @@ import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args ) {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
+public class App {
 
-        Communication communication = context.getBean("communication", Communication.class);
+  public static void main(String[] args) {
+    AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
+        MyConfig.class);
+    Communication communication = context.getBean("communication", Communication.class);
 
 //        List<Employee> employees = communication.getAllEmployees();
 //        System.out.println(employees);
@@ -27,6 +23,6 @@ public class App
 //        emp.setId(13);
 //        communication.saveEmployee(emp);
 
-        communication.deleteEmployee(13);
-    }
+    communication.deleteEmployee(13);
+  }
 }
